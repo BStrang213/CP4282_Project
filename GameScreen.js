@@ -73,7 +73,7 @@ export default function GameScreen() {
   const gunWidth = 60;
   //const gunPosition = screenWidth / 2 - gunWidth / 2;
   const gunCenterX = screenWidth / 2;
-  const [gunPosition, setGunPosition] = useState({
+  const [gunPosition, setGunPosition] = useRef({
         x: screenWidth / 2 - gunWidth / 2,
         y: screenHeight - 70
   });
