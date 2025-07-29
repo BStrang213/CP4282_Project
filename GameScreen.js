@@ -73,7 +73,7 @@ export default function GameScreen() {
   const gunWidth = 60;
   //const gunPosition = screenWidth / 2 - gunWidth / 2;
   const gunCenterX = screenWidth / 2;
-  const [gunPosition, setGunPosition] = useRef({
+  const [gunPosition, setGunPosition] = useState({
         x: screenWidth / 2 - gunWidth / 2,
         y: screenHeight - 70
   });
@@ -94,11 +94,6 @@ export default function GameScreen() {
    *   setGunPosition({ x: locationX - gunWidth/2, y: locationY });
    * };
    */
-
-   const handleTouchMove = (event) => {
-      const { locationX, locationY } = event.nativeEvent;
-      setGunPosition({ x: locationX - gunWidth/2, y: locationY });
-   };
   
   // Refs for game timers and IDs
   const bubbleIdRef = useRef(1);
@@ -334,7 +329,7 @@ export default function GameScreen() {
             <View
               style={[
                 styles.laser,
-                { left: gunCenterX - 2 } // Center the 4px wide laser from gun center
+                { left: gunCenterX - 2} // Center the 4px wide laser from gun center
               ]}
             />
           )}
