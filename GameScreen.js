@@ -72,10 +72,15 @@ export default function GameScreen() {
   // Fixed gun position - currently in the middle (MODIFY THIS)
   const gunWidth = 60;
   //const gunPosition = screenWidth / 2 - gunWidth / 2;
-  const gunCenterX = screenWidth / 2;
-  const [gunPosition, setGunPosition] = useState({
-        x: SharedValue<number>,
-        y: SharedValue<number>
+   const gunCenterX = screenWidth / 2;
+  // const [gunPosition, setGunPosition] = useState({
+  //       x: SharedValue<number>,
+  //       y: SharedValue<number>
+  // });
+
+  const [gunPosition, setGunPosition] = useState({ 
+    x: locationX, 
+    y: locationY
   });
   
   /**
