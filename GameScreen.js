@@ -71,18 +71,32 @@ export default function GameScreen() {
   
   // Fixed gun position - currently in the middle (MODIFY THIS)
   const gunWidth = 60;
-  //const gunPosition = screenWidth / 2 - gunWidth / 2;
-   const gunCenterX = screenWidth / 2;
+  const gunPosition = screenWidth / 2 - gunWidth / 2;
+  const gunCenterX = screenWidth / 2;
+
   // const [gunPosition, setGunPosition] = useState({
   //       x: SharedValue<number>,
   //       y: SharedValue<number>
   // });
 
-  const [gunPosition, setGunPosition] = useState({ 
-    x: locationX, 
-    y: locationY
-  });
+  // const [gunPosition, setGunPosition] = useState({ 
+  //   x: locationX, 
+  //   y: locationY
+  // });
+
+  //  const [gunPosition, setGunPosition] = useState({ 
+  //     x: Animation(onclick), 
+  //     y: Animation(onclick)
+  // });
+
+  //  const [gunPosition, setGunPosition] = useState({ 
+  //    x: screenWidth / 2 - gunWidth / 2, 
+  //    y: screenHeight - 70,
+  //    setGunPosition: Animation(onclick)
+  //  });
   
+  
+
   /**
    * ============== STUDENT TASK 2 ==============
    * TODO: IMPLEMENT GUN MOVEMENT
